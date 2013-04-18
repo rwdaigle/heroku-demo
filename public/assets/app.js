@@ -1,20 +1,18 @@
 function initMap() {
-  var latlng = new google.maps.LatLng(53, -8);
-  var myOptions = {
-    center: latlng,
+  var location = {latitude: 37.555, longitude: -122.2687}
+  var latLng = new google.maps.LatLng(location.latitude, location.longitude);
+  var map = new google.maps.Map(document.getElementById("map"), {
+    center: latLng,
     zoom: 4,
     disableDefaultUI: true,
     mapTypeId: google.maps.MapTypeId.ROADMAP
-  };
-  var map = new google.maps.Map(document.getElementById("map"), myOptions);
+  });
   var marker = new google.maps.Marker({
-      position: latlng,
+      position: latLng,
       icon: "https://maps.google.com/mapfiles/ms/icons/purple-dot.png",
       animation: google.maps.Animation.DROP,
       map: map
   });
 }
 
-$(document).ready(function(){
-  initMap();
-});
+$(document).ready(initMap);
