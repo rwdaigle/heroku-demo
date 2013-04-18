@@ -1,10 +1,16 @@
+body {
+  background: #131313;
+  font-family: "helvetica";
+}
+
 #header {
   padding-top: 1em;
   text-align: center;
+  color: #745d99;
 }
 
 #map-container {
-  padding-top: 2em;
+  padding-top: 1em;
   width: 100%;
 }
 
